@@ -43,7 +43,7 @@
 
       - name: copying catalogue service dependencies
         ansible.builtin.copy:
-          src: service/catalogue.service
+          src: catalogue.service
           dest: /etc/systemd/system/catalogue.service
 
       - name: systemctl daemon reload
