@@ -24,7 +24,7 @@
   ansible.builtin.file:
     path: /usr/share/nginx/html
     state: directory
-    mode: '0755'
+
 
 - name: Download frontend code
   ansible.builtin.get_url:
