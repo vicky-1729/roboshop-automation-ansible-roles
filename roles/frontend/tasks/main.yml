@@ -38,7 +38,7 @@
 
     - name: copy roboshop content into nginx configuration
       ansible.builtin.copy:
-        src: repo_config/nginx.conf
+        src: nginx.conf
         dest: /etc/nginx/nginx.conf
 
     
