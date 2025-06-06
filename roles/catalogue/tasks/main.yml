@@ -8,10 +8,15 @@
           name: common
           tasks_from: app_setup
 
-      - name: copying mongo repo
-        ansible.builtin.copy:
-          src: mongo.repo
-          dest: /etc/yum.repos.d/mongo.repo
+      # - name: copying mongo repo
+      #   ansible.builtin.copy:
+      #     src: mongo.repo
+      #     dest: /etc/yum.repos.d/mongo.repo
+
+      - name: copying mongo repo from common 
+        include_role:
+          name: common
+          tasks_from: mongo
 
       - name: installing mongodb cilent server
         ansible.builtin.package:
