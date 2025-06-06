@@ -1,4 +1,3 @@
-  tasks:
     - name: copying the repo
       ansible.builtin.copy:
         src: repo_config/mongo.repo
