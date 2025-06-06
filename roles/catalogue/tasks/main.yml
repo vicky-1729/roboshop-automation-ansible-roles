@@ -16,7 +16,7 @@
       - name: copying mongo repo from common 
         include_role:
           name: common
-          tasks_from: mongo
+          tasks_from: mongo.repo
 
       - name: installing mongodb cilent server
         ansible.builtin.package:
