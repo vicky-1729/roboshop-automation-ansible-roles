@@ -23,7 +23,3 @@
           dest: /app
           remote_src: yes # yes means files already exist in catalogue server
 
-      - name: copying catalogue service dependencies
-        ansible.builtin.copy:
-          src: catalogue.service
-          dest: /etc/systemd/system/catalogue.service
