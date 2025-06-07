@@ -1,0 +1,5 @@
+ RABBITMQ_USER: roboshop
+ RABBITMQ_PASSWORD: roboshop123
+ rabbitmq_host: rabbitmq.tcloudguru.in
+ user_host: user.tcloudguru.in
+ cart_host: cart.tcloudguru.in
