@@ -1,5 +1,9 @@
 CATALOGUE_HOST: catalogue.tcloudguru.in
+
 USER_HOST: user.tcloudguru.in
+
 CART_HOST: cart.tcloudguru.in
+
 SHIPPING_HOST: shipping.tcloudguru.in
+
 PAYMENT_HOST: payment.tcloudguru.in
