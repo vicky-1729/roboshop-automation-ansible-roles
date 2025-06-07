@@ -1,0 +1,4 @@
+cart_host: cart.tcloudguru.in
+mysql_host: mysql.tcloudguru.in
+mysql_password : RoboShop@1
+mysql_user : root

@@ -1,0 +1,34 @@
+  - name: app_setup from common
+    include_role:
+      name: common
+      tasks_from: app_setup
+
+  - name: maven_setup from common
+    include_role:
+      name: common
+      tasks_from: maven_setup
+
+  - name: import data
+    tags:
+    - import
+    community.mysql.mysql_db:
+      name: all
+      login_user: "{{ mysql_user }}"
+      login_password: "{{ mysql_password }}"
+      login_host: "{{ mysql_host }}"
+      state: import
+      target: "{{ item }}"
+    loop:
+    - /app/db/schema.sql
+    - /app/db/app-user.sql
+    - /app/db/master-data.sql
+
+  - name: systemd app_setup
+    include_role: 
+      name: common
+      tasks_from: systemd_setup
+
+  
+
+
+  
