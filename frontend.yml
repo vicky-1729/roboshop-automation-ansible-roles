@@ -1,3 +1,8 @@
+- name: creating the frontend server
+  hosts: frontend
+  become: true
+
+  tasks:
     - name: disable nginx 
       ansible.builtin.command: dnf module disable nginx -y
 
@@ -37,10 +42,11 @@
         state: absent
 
     - name: copy roboshop content into nginx configuration
-      ansible.builtin.template:
-        src: nginx.conf.j2
+      ansible.builtin.copy:
+        src: repo_config/nginx.conf
         dest: /etc/nginx/nginx.conf
-        
+
+    
     - name: restart nginx
       ansible.builtin.service:
         name: nginx
