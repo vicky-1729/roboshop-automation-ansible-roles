@@ -44,7 +44,7 @@
 
 - name: Deploy Roboshop NGINX config
   ansible.builtin.template:
-    src: roles/frontend/templates/nginx.conf
+    src: nginx.conf.j2
     dest: /etc/nginx/nginx.conf
   notify:
     - Restart nginx
